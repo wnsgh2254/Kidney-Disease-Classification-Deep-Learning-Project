@@ -7,7 +7,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Kidney-Disease-Classification-Deep-Learning-Project"
 AUTHOR_USER_NAME = "wnsgh2254"
-SRC_REPO = "cnnClassfier"
+SRC_REPO = "cnnClassfier" # makes me able to access any folder without mentioning
 AUTHOR_EMAIL = "wnsgh2254@gmail.com"
 
 setuptools.setup(
