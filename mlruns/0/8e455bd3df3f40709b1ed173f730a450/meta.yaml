@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/simjunho/Desktop/Deep_learning/Kidney-Disease-Classification-Deep-Learning-Project/mlruns/0/8e455bd3df3f40709b1ed173f730a450/artifacts
+end_time: 1697255270032
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8e455bd3df3f40709b1ed173f730a450
+run_name: traveling-foal-48
+run_uuid: 8e455bd3df3f40709b1ed173f730a450
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697255255040
+status: 3
+tags: []
+user_id: simjunho
