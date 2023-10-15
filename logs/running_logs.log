@@ -409,3 +409,10 @@ x==========x]
  * Running on http://192.168.1.113:8080]
 [2023-10-14 16:44:16,207: INFO : _internal : [33mPress CTRL+C to quit[0m]
 [2023-10-14 16:44:24,568: INFO : _internal : 127.0.0.1 - - [14/Oct/2023 16:44:24] "GET / HTTP/1.1" 200 -]
+[2023-10-14 17:00:26,731: INFO : _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.113:8080]
+[2023-10-14 17:00:26,732: INFO : _internal : [33mPress CTRL+C to quit[0m]
+[2023-10-14 17:00:38,880: INFO : _internal : 127.0.0.1 - - [14/Oct/2023 17:00:38] "GET / HTTP/1.1" 200 -]
+[2023-10-14 17:00:48,245: INFO : _internal : 127.0.0.1 - - [14/Oct/2023 17:00:48] "POST /predict HTTP/1.1" 200 -]
