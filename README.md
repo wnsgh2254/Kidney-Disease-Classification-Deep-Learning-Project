@@ -1,30 +1,54 @@
-# Kidney-Disease-Classification-Deep-Learning-Project
 
-## WorkFlows
+## 🩺📷 Kidney-Disease-Classification
 
-1. Update config.yaml
-2. Update secrets.yaml [Optional]
-3. Update params.yaml
-4. Update teh entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipline
-8. Update the main.py
-9. Update the dvc.yaml
-10. app.py
 
-# How to run?
+![example](https://drive.google.com/uc?export=view&id=1WulaI1M69m3-awmRvsYUa5YRLrmVNAYZ)
 
-### STEPS:
+![result](https://drive.google.com/uc?export=view&id=1sHgDUU7JlJgAdUneBhxQG50ULu7_W-N8)
 
-Clone the repository
+- This repository represents **"a deep learning-based Kidney Disease classifier"**.
+- With the help of this project we can classify Kidney Disease.
+
+## 📝 Description
+- Utilized a pre-trained **VGG16** model for deep learning-based Kidney Disease classification.
+- The end-to-end solution encapsulates a web app using **Docker**, **Flask**, and **HTML**.
+- Deployed the solution on **AWS ECR** and **EC2** with tracking tools **DVC** and **mlflow**.
+
+## ⏳ Dataset
+- The original dataset is sourced from [Kaggle's Kidney Disease dataset](https://www.kaggle.com/datasets/akshayksingh/kidney-disease-dataset)
+- Due to hardware limitations, a sampled version of the same dataset was utilized in the code.
+
+## 🖥 Installation
+
+### 🛠 Requirements
+* tensorflow == 2.12.0
+* pandas
+* dvc
+* mlflow == 2.2.2
+* notebook
+* numpy
+* matplotlib
+* seaborn
+* python-box==6.0.2
+* pyYAML
+* tqdm
+* ensure==1.0.2
+* joblib
+* types-PyYAML
+* scipy
+* Flask
+* Flask-Cors
+* gdown
+
+## ⚙️ Setup
+1. Clone the repository
+
 
 ```bash
 https://github.com/wnsgh2254/Kidney-Disease-Classification-Deep-Learning-Project
+
 ```
-
-
-### STEP 01- Create a conda environment after opening the repository
+2. Create a conda environment after opening the repository
 
 ```bash
 conda create -n cnncls python=3.8 -y
@@ -34,34 +58,46 @@ conda create -n cnncls python=3.8 -y
 conda activate cnncls
 ```
 
+3. install the requirements
 
-### STETP 02- install the requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+## 🎯 Inference demo
+1. Acticate conda environment
+```bash
+conda activate cnncls
+```
 
-## MLflow
-
-- [Documentation](https://mlflow.org/docs/latest/index.html)
-
-- [MLflow tutorial](https://youtu.be/qdcHHrsXA48?si=bD5vDS60akNphkem)
-
-##### cmd
-- mlflow ui
-
-### dagshub
-[dagshub](https://dagshub.com/)
-
-MLFLOW_TRACKING_URI=https://dagshub.com/wnsgh2254/Kidney-Disease-Classification-Deep-Learning-Project.mlflow \
-MLFLOW_TRACKING_USERNAME=wnsgh2254 \
-MLFLOW_TRACKING_PASSWORD=a24a1403dc1f5f4b6f985e06b428fb27e5f0100a \
-python script.py
-
-Run this to export as env variables:
+2. Run app.py file on terminal(for MacOS)
 
 ```bash
+$ python app.py
+```
 
+3. Copy and paste the last link to the browser.(in this case -> 192.168.1.113.8080)
+
+![address](https://drive.google.com/uc?export=view&id=1UyZJQrC6ulAmCmjld-t-ZODJFvCByNyB)
+
+
+## 📈 MLflow
+
+* MLflow allows us to track model parameters, monitor results, and compare outcomes across different parameter settings
+
+![mlflow1](https://drive.google.com/uc?export=view&id=1j9LPLuKMmoXidAvoSkCxQ01tTVt0sA5e)
+![mlflow2](https://drive.google.com/uc?export=view&id=1pm2DKTQAjE5N-J0AvhXsWWAuzeLCINV7)
+
+## ⛓ DVC
+
+1. Acticate conda environment
+```bash
+conda activate cnncls
+```
+
+2. Run this to export as env variables
+
+```bash
 export MLFLOW_TRACKING_URI=https://dagshub.com/wnsgh2254/Kidney-Disease-Classification-Deep-Learning-Project.mlflow
 
 export MLFLOW_TRACKING_USERNAME=wnsgh2254
@@ -70,99 +106,17 @@ export MLFLOW_TRACKING_PASSWORD=a24a1403dc1f5f4b6f985e06b428fb27e5f0100a
 
 ```
 
-### DVC cmd
+3. Run DVC cmd on Terminal.
 
-1. dvc init
-2. dvc repro
-3. dvc dag
+```bash
+dvc dag
+```
 
+4. Result
 
-## About MLflow & DVC
-
-MLflow
-
- - Its Production Grade
- - Trace all of your expriements
- - Logging & taging your model
+![Image](https://drive.google.com/uc?export=view&id=1yzDwA-vpKXfYEqs8srPN0bJmvdCfPi1z)
 
 
-DVC 
-
- - Its very lite weight for POC only
- - lite weight expriements tracker
- - It can perform Orchestration (Creating Pipelines)
-
- # AWS-CICD-Deployment-with-Github-Actions
-
-## 1. Login to AWS console.
-
-## 2. Create IAM user for deployment
-
-	#with specific access
-
-	1. EC2 access : It is virtual machine
-
-	2. ECR: Elastic Container registry to save your docker image in aws
 
 
-	#Description: About the deployment
 
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 371124637616.dkr.ecr.ap-southeast-2.amazonaws.com/kidney
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = 
-
-    AWS_ECR_LOGIN_URI = 
-
-    ECR_REPOSITORY_NAME = 
-
-	
