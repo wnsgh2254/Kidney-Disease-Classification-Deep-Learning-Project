@@ -90,6 +90,10 @@ $ python app.py
 
 ## ⛓ DVC
 
+* DVC is a tool designed to handle large datasets and ML/DL models, making data science experiments reproducible.
+* Integrates seamlessly with Git, allowing for versioning of datasets and ML models.
+* Provides a visual pipeline representation, streamlining the experimentation process.
+
 1. Acticate conda environment
 ```bash
 conda activate cnncls
